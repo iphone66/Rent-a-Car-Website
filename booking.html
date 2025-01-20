@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervisite auto - Car Rental</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/rentlogo.png" alt="Car Rental Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Pocetna</a></li>
+                <li><a href="auta.html">Auta</a></li>
+                <li><a href="booking.html">Bukiranje</a></li>
+                <li><a href="contactus.html">Kontaktirajte nas</a></li> <!-- Link to Booking Page -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Rezervisi Auto</h1>
+        <p>Odaberite Auto i ispunite sljedeca polja:</p>
+
+        <!-- Booking Form -->
+        <form action="submit_booking.php" method="POST">
+            <!-- Car Selection -->
+            <label for="car">Izaberi Auto:</label>
+            <select id="car" name="car" required>
+                <option value="SUV Model X">SUV Model X - 100KM po danu</option>
+                <option value="Convertible Z">Convertible Z - 150KM po danu</option>
+                <option value="Sports Car GT">Sports Car GT - 200KM po danu</option>
+            </select><br>
+
+            <!-- Customer Name -->
+            <label for="name">Ime i prezime:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <!-- Customer Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <!-- Pickup Date -->
+            <label for="pickup_date">Datum uzimanja:</label>
+            <input type="date" id="pickup_date" name="pickup_date" required><br>
+
+            <!-- Return Date -->
+            <label for="return_date">Datum vracanja:</label>
+            <input type="date" id="return_date" name="return_date" required><br>
+
+            <!-- Additional Instructions (optional) -->
+            <label for="instructions">Dodatna pitanja:</label><br>
+            <textarea id="instructions" name="instructions" rows="4" placeholder="Specijalni zahtjevi ili pitanja..."></textarea><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Rezervisi sad">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rent a Car Sarajevo. Sva prava pridrzana.</p>
+    </footer>
+</body>
+</html>

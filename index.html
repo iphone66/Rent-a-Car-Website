@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent A Car Usluge</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/rentlogo.png" alt="Logo">
+
+            
+        </div>
+        <h1>Rent a Car Usluge</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Pocetna</a></li>
+                <li><a href="auta.html">Auta</a></li>
+                <li><a href="booking.html">Bukiranje</a></li>
+                <li><a href="contactus.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="car-list">
+        <h2>Dostupna auta</h2>
+        <div class="car-card" id="car1">
+            <img src="img/mustang.jfif" alt="Car 1">
+            <h3>Ford Mustang</h3>
+            <p>Cijena po danu: 50KM</p>
+            <button onclick="bookCar('Ford Mustang')">Rezervisi sad</button>
+        </div>
+
+        <div class="car-card" id="car2">
+            <img src="img/camaro.jfif" alt="Car 2">
+            <h3>Chevrolet Camaro</h3>
+            <p>Cijena po danu: 70KM</p>
+            <button onclick="bookCar('Chevrolet Camaro')">Rezervisi sad</button>
+        </div>
+
+        <div class="car-card" id="car3">
+            <img src="img/supra.jfif" alt="Car 3">
+            <h3>Toyota Supra</h3>
+            <p>Cijena po danu: 100KM</p>
+            <button onclick="bookCar('Toyota Supra')">Rezervisi sad</button>
+        </div>
+
+
+    </section>
+
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Bukiranje auta</h2>
+            <p id="car-name"></p>
+            <label for="dates">Odaberite datum:</label>
+            <input type="date" id="pickup-date">
+            <input type="date" id="dropoff-date">
+            <button onclick="confirmBooking()">Potvrdi rezervaciju</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Rent a Car Sarajevo. Sva prava pridrzana.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
